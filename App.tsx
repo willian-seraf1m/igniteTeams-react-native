@@ -1,21 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Groups } from '@screens/Groups';
+import { ThemeProvider } from 'styled-components';
+import theme from '@theme/index';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello world!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <ThemeProvider theme={theme}>
+      <Groups />
+    </ThemeProvider>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#808080',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
